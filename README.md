@@ -14,3 +14,8 @@ Plug and play, no need to do anything. Just keep the contributing files intact.
 1. Possiblility of timer being too quick at times.
 2. Card flips being limited at times.
 3. Flipping of the card being a contributor to the timer count.
+
+
+Live Demo at: https://memory-match-one-dun.vercel.app
+
+Video Demo at: https://youtu.be/0HaLmCmYcXE
