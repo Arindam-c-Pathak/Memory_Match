@@ -1,0 +1,162 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #014927;
+    color: #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0.5rem;
+}
+ 
+.container {
+    width: 100%;
+    max-width: 100%;
+    background-color: #723001;
+    border-radius: 2%;
+    border: #4e2900 4px solid;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    display: block;
+}
+
+.card {
+    width: 350px;
+    height: 150px;
+    margin: 0.5rem;
+    padding-left: 0%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 2px solid #2d2d2d;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.3s, background-color 0.1s;
+}
+
+.card-face-front {
+    background-color: #5404a9;
+    background-image: repeating-linear-gradient(
+        45deg,
+        #4cb7fa 0px,
+        #48daff 5px,
+        transparent 5px,
+        transparent 15px
+    );
+    background-size: 20px 20px;
+}
+
+.card-face-back {
+    background-color: #f79898;
+    border: rgb(91, 36, 255) 2px dashed;
+    transform: rotateY(180deg);
+}
+
+.card:not(.is-flipped):hover .card-face-front {
+    background-color: #2563eb;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.difficulty-select {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.difficulty-select select {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+
+@media (max-width: 1536px) {
+    .card {
+        width: 250px;
+        height: 180px;
+        padding-left: 0%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .card {
+        width: 225px;
+        height: 215px;
+        padding-left: 0%;
+    }
+}
+
+@media (max-width: 1080px) {
+    .card {
+        width: 200px;
+        height: 200px;
+        padding-left: 0%;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .card {
+        width: 150px;
+        height: 80px;
+        padding-left: 0%;
+    }
+}
+
+@media (max-width: 900px) {
+    .card {
+        width: 150px;
+        height: 80px;
+        padding-left: 0%;
+    }
+}
+
+@media (max-width: 720px) {
+    .card {
+        width: 80px;
+        height: 80px;
+        padding-left: 0%;
+    }
+}
+@media (max-width: 480px) {
+    .card {
+        width: 80px;
+        height: 80px;
+        padding-left: 0%;
+    }
+}
+@media (max-width: 360px) {
+    .card {
+        width: 60px;
+        height: 60px;
+        padding-left: 0%;
+    }
+}

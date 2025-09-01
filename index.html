@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="body">
+
+    <div class="container">
+        <h1 class="text-3xl md:text-4xl font-bold text-center mb-2">Memory Match</h1>
+        <p class="text-sm text-gray-400 mb-6">Lets test your Memory, shall we?
+        </p>
+            <div class="difficulty-select text-center mb-6">
+        <label for="difficulty" class="mr-2 font-bold">Select Difficulty:</label><br>
+        <select id="difficulty" class="p-2 rounded bg-gray-800 text-white border border-gray-600">
+            <option value="easy" selected>Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        </div>
+        <div class="flex justify-between items-center mb-6">
+            <div class="flex-1 text-left">
+                <p class="text-sm text-gray-400">Moves</p>
+                <p id="moves-display" class="text-2xl font-bold text-blue-400">0</p>
+            </div>
+            <div class="flex-1 text-center">
+                <p class="text-sm text-gray-400">Time</p>
+                <p id="time-display" class="text-2xl font-bold text-green-400">0s</p>
+            </div>
+            <div class="flex-1 text-right">
+                <p class="text-sm text-gray-400">Best</p>
+                <p id="best-score-display" class="text-2xl font-bold text-yellow-400">--</p>
+            </div>
+        </div>
+        <div id="game-board" class="grid grid-cols-4 sm:grid-cols-4 gap-2">
+            <!-- Cards will be dynamically inserted here -->
+        </div>
+
+        <div class="flex justify-center mt-6">
+            <button id="restart-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 shadow-md">
+                Restart Game
+            </button>
+        </div>
+    </div>
+
+
+    <!-- Win/Loss Message Box -->
+    <div id="message-box" class="overlay hidden">
+        <div class="bg-gray-800 rounded-xl p-8 text-center shadow-lg border border-gray-700">
+            <h2 id="message-title" class="text-3xl font-bold mb-4 text-white">You Win!</h2>
+            <p id="message-content" class="text-lg text-gray-300 mb-6">You solved the puzzle in 12 moves and 30 seconds.</p>
+            <button id="message-restart-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105 shadow-md">
+                Play Again
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
